@@ -1,0 +1,14 @@
+
+# Core
+## Branded Items
+* nice!nano v2 Microcontroller (nrf52840)*
+* nice!view OLED Screen*
+* Hotswap Kalih MX Switch Sockets*
+
+## Open Ended Items
+* EC11 Rotary Encoder*
+* SOD-123 Diodes*
+
+## Undetermined
+- Battery size, haven't personally figured out the capacity I will use, I recommend consulting the nice! website for more detailed information.
+
