@@ -6,8 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "Mercury Macropad")
-		(date "2026-09-03")
-		(rev "v1")
+		(date "2026-11-19")
+		(rev "v2")
+		(company "JKD")
+		(comment 1 "Licensed under CERN-OHL-S v2")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
@@ -358,7 +360,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:RotaryEncoder_Switch"
+		(symbol "Device:RotaryEncoder_Switch_MP"
 			(pin_names
 				(offset 0.254)
 				(hide yes)
@@ -368,8 +370,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "ROT"
-				(at 0 6.604 0)
+			(property "Reference" "SW"
+				(at 0 8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -378,8 +380,8 @@
 					)
 				)
 			)
-			(property "Value" "RotaryEncoder_Switch"
-				(at 0 -6.604 0)
+			(property "Value" "RotaryEncoder_Switch_MP"
+				(at 0 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -400,7 +402,7 @@
 				)
 			)
 			(property "Datasheet" ""
-				(at 0 6.604 0)
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -410,8 +412,8 @@
 					)
 				)
 			)
-			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
-				(at 0 0 0)
+			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -443,7 +445,7 @@
 					)
 				)
 			)
-			(symbol "RotaryEncoder_Switch_0_1"
+			(symbol "RotaryEncoder_Switch_MP_0_1"
 				(rectangle
 					(start -5.08 5.08)
 					(end 5.08 -5.08)
@@ -668,7 +670,7 @@
 					)
 				)
 			)
-			(symbol "RotaryEncoder_Switch_1_1"
+			(symbol "RotaryEncoder_Switch_MP_1_1"
 				(pin passive line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -716,6 +718,24 @@
 						)
 					)
 					(number "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2221,6 +2241,12 @@
 		(uuid "8c6b37ad-8eda-4ce0-87e7-f402dac5d7dc")
 	)
 	(junction
+		(at 101.6 155.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0243f587-41fe-4c67-a066-6abdff9be643")
+	)
+	(junction
 		(at 93.98 145.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2384,7 +2410,7 @@
 	)
 	(no_connect
 		(at 241.3 50.8)
-		(uuid "af7ea82c-833f-4d4f-b012-a3cae9fbd1b5")
+		(uuid "9e3066f4-535e-4e89-aef6-26baac795bce")
 	)
 	(wire
 		(pts
@@ -2798,6 +2824,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 155.89) (xy 101.6 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80ad83a6-cedc-4698-9185-f52a96600ed1")
+	)
+	(wire
+		(pts
 			(xy 128.27 48.26) (xy 127 48.26)
 		)
 		(stroke
@@ -2805,6 +2841,16 @@
 			(type default)
 		)
 		(uuid "829db941-5e4a-4e07-8244-9c95d7ef42ae")
+	)
+	(wire
+		(pts
+			(xy 101.6 154.94) (xy 101.6 155.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87ff30fa-1d45-467c-84e6-0033dfb3b4d6")
 	)
 	(wire
 		(pts
@@ -3253,6 +3299,30 @@
 		(uuid "35d5f443-88b3-42a3-8bf1-c0fc74f8d769")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 238.8591 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape input)
+		(at 101.6 161.29 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "38ed7507-bd21-418e-a546-292e6002f7a2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.6 168.1457 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5228,7 +5298,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:RotaryEncoder_Switch")
+		(lib_id "Device:RotaryEncoder_Switch_MP")
 		(at 101.6 148.27 0)
 		(unit 1)
 		(body_style 1)
@@ -5240,7 +5310,7 @@
 		(fields_autoplaced yes)
 		(uuid "708ce391-d543-44b4-8dad-4bb37455f850")
 		(property "Reference" "SW1"
-			(at 101.6 138.11 0)
+			(at 101.6 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5250,7 +5320,7 @@
 			)
 		)
 		(property "Value" "RotaryEncoder_Switch"
-			(at 101.6 140.65 0)
+			(at 101.6 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5271,7 +5341,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 141.666 0)
+			(at 101.6 160.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5281,8 +5351,8 @@
 				)
 			)
 		)
-		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
-			(at 101.6 148.27 0)
+		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+			(at 101.6 163.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5306,6 +5376,9 @@
 		)
 		(pin "S1"
 			(uuid "097cbee4-71c7-41d4-a070-8e44e5ad61c0")
+		)
+		(pin "MP"
+			(uuid "944a9dde-b854-4c2d-86ff-21b869b78ae4")
 		)
 		(instances
 			(project "keyboard"
@@ -5886,89 +5959,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_SPDT")
-		(at 236.22 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8c8215f3-ba2d-4242-a471-04182aeb9ea9")
-		(property "Reference" "SW18"
-			(at 236.22 39.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_SPDT"
-			(at 236.22 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
-			(at 236.22 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 236.22 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Switch, single pole double throw"
-			(at 236.22 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "bf45adf8-b62b-4a8c-a74a-7d200eda9305")
-		)
-		(pin "3"
-			(uuid "fb51c8fc-60c4-4c0a-b4d1-6d03042a405a")
-		)
-		(pin "1"
-			(uuid "41098b7f-1d91-4566-9460-41d34e663f0a")
-		)
-		(instances
-			(project "keyboard"
-				(path "/ddc29c9e-2ff6-4612-a1c0-60c3b9c23c8d"
-					(reference "SW18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Small")
 		(at 120.65 80.01 90)
 		(unit 1)
@@ -6261,7 +6251,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
 			(at 218.44 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -7640,6 +7630,90 @@
 			(project "keyboard"
 				(path "/ddc29c9e-2ff6-4612-a1c0-60c3b9c23c8d"
 					(reference "SW14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPDT")
+		(at 236.22 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e7761a89-5943-4d06-b4c0-89d78cf43334")
+		(property "Reference" "SW19"
+			(at 234.9499 44.45 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 237.49 44.45 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Angled_CK_OS102011MA1Q"
+			(at 236.22 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/450301014042.pdf"
+			(at 236.22 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, single pole double throw"
+			(at 236.22 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1c3f4eaa-3ca7-4852-9bc7-315eaaf2aaa1")
+		)
+		(pin "1"
+			(uuid "3b53fc27-f0fa-4e09-b8a5-b28a8e821052")
+		)
+		(pin "3"
+			(uuid "8f1f7b8a-d0b9-40ea-a50a-ecef2b30e182")
+		)
+		(instances
+			(project "keyboard"
+				(path "/ddc29c9e-2ff6-4612-a1c0-60c3b9c23c8d"
+					(reference "SW19")
 					(unit 1)
 				)
 			)
