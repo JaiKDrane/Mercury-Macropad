@@ -9,6 +9,7 @@ This repository uses a split licensing model:
 
 
 <img width="1920" height="1080" alt="RenderImage2" src="https://github.com/user-attachments/assets/08eabef6-1a44-476b-88a3-b0c990175d85" />
+
 *Blender rending of what the finished product might look like.*
 
 
